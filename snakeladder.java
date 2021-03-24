@@ -2,34 +2,50 @@ import java.util.Random;
 
 public class snakeladder
 {
-	public static void main(String grgs[])
-	{
-		int startpoint = 0;
-		System.out.println("PlayerStartPoint:" +startpoint);
-		Random random = new Random();
-		int diceroll = (random.nextInt(6))+1;
+        public static void main(String grgs[])
+        {
+                int playerposition =0;
 
-		System.out.println("Dice Number:"+diceroll);
-
-	int playerposition= (int) Math.floor(Math.random() * 10 % 3);
+                int startpoint = 0;
+                while (playerposition <= 100){
 
 
-		switch ((int) playerposition)
-			{
-		case 1 :
-	   	playerposition  = diceroll;
-		System.out.println("move ahead:" +playerposition);
-		break;
+                Random random = new Random();
+                int diceroll = (random.nextInt(6))+1;
 
-		case 2 :
-		playerposition = playerposition - diceroll;
-                System.out.println("move back:" +playerposition);
-		break;
 
-		default:
-		 System.out.println("same position:" +playerposition);
-                
-		}
+                Random rand = new Random();
+                int empCheck= rand.nextInt(3);
 
-	}
+
+                switch (empCheck)
+                        {
+                case 0 :
+                playerposition = playerposition;
+                System.out.println("player same position");
+
+                case 1 :
+                playerposition  = diceroll + playerposition;
+                System.out.println("player move ahead"+diceroll+" position.");
+                break;
+
+                case 2 :
+                playerposition = playerposition - diceroll;
+                System.out.println(" player move back" );
+                break;
+
+                default:
+                 System.out.println("Invalid option");
+
+                                }
+                  }
+                System.out.println("Player win");
+        }
 }
+
+
+
+
+
+
+
