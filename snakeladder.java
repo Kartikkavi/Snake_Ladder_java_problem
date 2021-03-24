@@ -11,5 +11,25 @@ public class snakeladder
 
 		System.out.println("Dice Number:"+diceroll);
 
+	int playerposition= (int) Math.floor(Math.random() * 10 % 3);
+
+
+		switch ((int) playerposition)
+			{
+		case 1 :
+	   	playerposition  = diceroll;
+		System.out.println("move ahead:" +playerposition);
+		break;
+
+		case 2 :
+		playerposition = playerposition - diceroll;
+                System.out.println("move back:" +playerposition);
+		break;
+
+		default:
+		 System.out.println("same position:" +playerposition);
+                
+		}
+
 	}
 }
