@@ -9,11 +9,11 @@ public class snakeladder
 		Random random = new Random();
 		int diceroll = (random.nextInt(6))+1;
 
-		System.out.println("Dice Number:"+diceroll);
 
-	       
+
                 Random rand = new Random();
                 int empCheck= rand.nextInt(3);
+
 		int playerposition =0;
 
                 switch (empCheck)
