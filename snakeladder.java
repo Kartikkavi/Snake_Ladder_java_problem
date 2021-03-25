@@ -7,7 +7,8 @@ public class snakeladder
                 int playerposition =0;
 
                 int startpoint = 0;
-                while (playerposition <= 100){
+                
+		while(playerposition <= 100){
 
 
                 Random random = new Random();
@@ -26,7 +27,7 @@ public class snakeladder
 
                 case 1 :
                 playerposition  = diceroll + playerposition;
-                System.out.println("player move ahead"+diceroll+" position.");
+                System.out.println("player move ahead:"+diceroll+" position.");
                 break;
 
                 case 2 :
@@ -39,7 +40,7 @@ public class snakeladder
 
                                 }
                   }
-                System.out.println("Player win");
+                System.out.println("Player win ");
         }
 }
 
