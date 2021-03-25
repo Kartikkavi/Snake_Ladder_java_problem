@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class snakeladder
 {
-	public static void main(String grgs[])
+	public static void main(String args[])
 	{
 		int startpoint = 0;
 		System.out.println("PlayerStartPoint:" +startpoint);
@@ -21,6 +21,7 @@ public class snakeladder
                 case 0 :
                 playerposition = playerposition;
                 System.out.println("player same position");
+		break;
 
                 case 1 :
                 playerposition  = diceroll + playerposition;
