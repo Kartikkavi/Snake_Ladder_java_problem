@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class snakeladder
 {
-        public static void main(String grgs[])
+        public static void main(String args[])
         {
                 int playerposition =0;
 
