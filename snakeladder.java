@@ -11,24 +11,30 @@ public class snakeladder
 
 		System.out.println("Dice Number:"+diceroll);
 
-	int playerposition= (int) Math.floor(Math.random() * 10 % 3);
+	       
+                Random rand = new Random();
+                int empCheck= rand.nextInt(3);
+		int playerposition =0;
 
+                switch (empCheck)
+                        {
+                case 0 :
+                playerposition = playerposition;
+                System.out.println("player same position");
 
-		switch ((int) playerposition)
-			{
-		case 1 :
-	   	playerposition  = diceroll;
-		System.out.println("move ahead:" +playerposition);
-		break;
+                case 1 :
+                playerposition  = diceroll + playerposition;
+                System.out.println("player move ahead:"+diceroll+" position.");
+                break;
 
-		case 2 :
-		playerposition = playerposition - diceroll;
-                System.out.println("move back:" +playerposition);
-		break;
+                case 2 :
+                playerposition = playerposition - diceroll;
+                System.out.println(" player move back" );
+                break;
 
-		default:
-		 System.out.println("same position:" +playerposition);
-                
+                default:
+                 System.out.println("Invalid option");
+        
 		}
 
 	}
