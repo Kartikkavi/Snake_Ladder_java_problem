@@ -7,12 +7,13 @@ public class snakeladder
                 int playerposition = 0,  playerpreviousposition = 0;
 
                 int startpoint = 0;
+		int counter = 0;
                 while (playerposition <= 100){
 
 
                 Random random = new Random();
                 int diceroll = (random.nextInt(6))+1;
-
+		counter++;
 
                 Random rand = new Random();
                 int Check= rand.nextInt(3);
@@ -20,7 +21,7 @@ public class snakeladder
                  playerpreviousposition = playerposition;
                 switch (Check)
                         {
-		
+
                 case 0 :
                 playerposition = playerposition;
                // System.out.println("player same position");
@@ -49,5 +50,6 @@ public class snakeladder
                   }
                 System.out.println(playerposition);
                 System.out.println("Player win");
+		System.out.println("NUm of time Dice roll:"+counter);
         }
 }
